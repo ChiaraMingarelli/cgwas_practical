@@ -1,4 +1,4 @@
-\documentclass[apj, onecolumn, lengthcheck,superscriptaddress,letterpaper,nofootinbib,nopreprintnumbers]{revtex4}
+\documentclass[article, onecolumn, ,nofootinbib,nopreprintnumbers]{revtex4}
 
 
 %%%%% AUTHORS - PLACE YOUR OWN MACROS HERE %%%%%
@@ -91,22 +91,27 @@ Pulsar timing arrays are sensitive to GWs in the nanoHertz frequency regime. Sou
 
 \begin{enumerate}
 \item For a pair of pulsars $a$ and $b$, define a reference frame. Specifically, write down the unit vectors which point to the pulsars, $\hat{p}_a$, $\hat{p}_b$, the direction of GW propagation $\hat{\Omega}$ and the principal axes $\hat m$, $\hat n$, such that $\hat m\times \hat n = \hat \Omega$.  {\it Hint, place pulsar $a$ on the z-axis and $b$ in the x-z plane}
-\item In your chosen coordinate system, write down the polarization tensors $e^+_{ab}(\hat \Omega) = \hat m_a\hat m_b - \hat n_a \hat n_b$, $e^\times_{ab} (\hat \Omega)= \hat m_a \hat n_b + \hat n_a \hat m_b$. For further reading, see \cite{AllenRomano:1999}.
-\item You now have all the ingredients to write down the antenna beam pattern, 
 
+\item Write down the general expression for the antenna beam pattern, 
 \begin{equation}
 F^A(\hat \Omega) = \frac{1}{2} \frac{\hat p^i \hat p^j}{1+\hat\Omega\cdot\hat p} e^A_{ij}(\hat\Omega) \, ,  
 \end{equation}
-where $A=+,\times$ is the GW polarization. Specifically, give expressions for $F^+_a$, $F^\times_a$, $F^+_b$, $F^\times_b$.
+where $A=+,\times$ is the GW polarization. The polarization tensors $e^+_{ij}(\hat \Omega) = \hat m_i\hat m_j - \hat n_i \hat n_j$, $e^\times_{ij} (\hat \Omega)= \hat m_i \hat n_j + \hat n_i \hat m_j$. For further reading, see \cite{AllenRomano:1999, Anholm:09}. 
 
+
+\item Give expressions for $F^+_a$, $F^\times_a$, $F^+_b$, $F^\times_b$ in your chosen coordinate frame
 \item The overlap reduction function is given by integrating the antenna beam patterns over the sky, i.e. over all possible GW directions $\hat \Omega$:
 \begin{equation}
 ^{(ab)}\Gamma(\zeta)=\int_0^\pi  \sin\theta d\theta \int_0^{2\pi} d\phi  \sum_A F^A_a(\hat \Omega) F^A_b(\hat \Omega) \, ,
 \end{equation}
-where $\zeta \in [0,\pi] $ is the angle between the pulsars. Using your expressions for the antenna beam pattern, you may either integrate the above expression analytically (hint, use contour integration) or open the ipython notebook and do this numerically. Plot the result for all $zeta$. The result is the Hellings and Downs curve! 
+where $\zeta \in [0,\pi] $ is the angle between the pulsars. Using your expressions for the antenna beam pattern, you may either integrate the above expression analytically (hint, use contour integration) or open the ipython notebook and do this numerically. Plot the result for all $\zeta$. The result is the Hellings and Downs curve! 
+
 \item Normalize this curve such that when $\zeta=0$, $^{(ab)}\Gamma(\zeta)=0.5$. What is this normalization factor?
+
 \item Which of these steps implicitly assumes an isotropic background? Where would we modify this calculation to take in to account anisotropy in the GW background? More on this in \cite{MingarelliEtAl:2013}.
 \end{enumerate}
+
+
 \begin{figure}[h]
 		\centering
 		\includegraphics[width=3.9in]{pta_geometry.pdf}
