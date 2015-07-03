@@ -1,0 +1,128 @@
+\documentclass[apj, onecolumn, lengthcheck,superscriptaddress,letterpaper,nofootinbib,nopreprintnumbers]{revtex4}
+
+
+%%%%% AUTHORS - PLACE YOUR OWN MACROS HERE %%%%%
+\usepackage{epsfig}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{ulem}
+%%\usepackage{nopageno}
+%%\usepackage{txfonts} % this one creates conflict
+%\usepackage[usenames]{color}
+\usepackage{endnotes}
+%\usepackage[authoryear]{natbib}
+
+%%\usepackage{latexsym}
+%%\usepackage{moreverb,longtable,subfigure}
+\usepackage{amssymb}
+\usepackage{amsmath,bm}
+\usepackage{times}
+\usepackage{subfigure}
+%\usepackage{aas_macros}
+\usepackage{verbatim}
+
+\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\bdm}{\begin{displaymath}}
+\newcommand{\edm}{\end{displaymath}}
+\newcommand{\bea}{\begin{eqnarray}}
+\newcommand{\eea}{\end{eqnarray}}
+
+\newcommand{\apjl}{Astrophysical Journal, Letters}
+\newcommand{\mnras}{MNRAS}
+%\newcommand{\prd}{Phys. Rev. D}
+%\newcommand{\apj}{Astrophysical Journal}
+\newcommand{\aap}{Astronomy and Astrophysics}
+\newcommand{\sovast}{Soviet Ast.}
+%\newcommand{\nat}{Nature}
+
+\newcommand{\cm}{\textcolor{magenta}}
+
+\newcommand{\cf}{\textit{cf.}~}
+\newcommand{\ie}{\textit{i.e.}~}
+\newcommand{\eg}{\textit{e.g.}~}
+\newcommand{\mss}{{\rm ms}}
+\newcommand{\km}{{\rm km}}
+\newcommand{\hz}{{\rm Hz}}
+\newcommand{\khz}{{\rm kHz}}
+\newcommand{\mpc}{{\rm  Mpc}}
+\newcommand{\Msolar}{\ensuremath{\Msun}}
+\newcommand{\mc}[1]{\textcolor{green}   {\texttt{\textbf{MC: #1}}} }
+\newcommand{\md}[1]{\textcolor{blue}   {\texttt{\textbf{MD: #1}}} }
+\newcommand{\jc}[1]{\textcolor{red}    {\texttt{\textbf{JC: #1}}} }
+\newcommand{\stanny}[1]{\textcolor{cyan}   {\texttt{\textbf{CR: #1}}} }
+\newcommand{\sesa}[1]{\textcolor{magenta}   {\texttt{\textbf{SESA: #1}}} }
+
+\newcommand{\mtrx}[1]{\bm{#1}}
+
+\newcommand{\msun}{M_\odot}
+\def\lsim{\lower.5ex\hbox{$\; \buildrel < \over \sim \;$}}
+
+\newcommand{\incgraph}[3]{\includegraphics[angle=#1, width=#2\textwidth]{#3}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%\title{European Pulsar Timing Array constraints on anisotropy in the nanohertz stochastic gravitational-wave background}
+\title{Friday practicum: stochastic gravitational wave backgrounds}
+\author{Chiara M. F. Mingarelli}
+\affiliation{TAPIR (Theoretical Astrophysics), California Institute of Technology MC 350-17, Pasadena, California 91125, USA}
+\author{Michele Vallisneri}
+\affiliation{TAPIR (Theoretical Astrophysics), California Institute of Technology MC 350-17, Pasadena, California 91125, USA}
+\affiliation{Jet Propulsion Laboratory, California Institute of Technology, Pasadena, California 91109, USA}
+\author{Yanbei Chen}
+\affiliation{TAPIR (Theoretical Astrophysics), California Institute of Technology MC 350-17, Pasadena, California 91125, USA}
+
+\date\today
+\maketitle
+
+\section{Introduction}
+In today's lectures, you have explored \cm{[Michele, Yanbei, add a blurb about your lectures]}, and how to detect low frequency GWs using Pulsar Timing Arrays. The following exercises are meant to cement these concepts. These come in at least 2 flavors: general exercises, and advanced ones for those who may already be familiar with these concepts and are up for a challenge! 
+
+\section{Exercises}
+Do as many of the following exercises as time allows. If you get stuck, please ask a Lecturer or a teaching assistant for help.
+
+\subsection{Pulsar Timing Arrays}
+Pulsar timing arrays are sensitive to GWs in the nanoHertz frequency regime. Sources here include supermassive black hole binaries, primordial (or relic) GWs from inflation, and cosmic strings. The goal of this exercise is to derive the overlap reduction function for an isotropic stochastic GW background. This is often referred to as the Hellings and Downs curve \cite{HellingsDowns:1983}.
+
+ %
+
+
+\begin{enumerate}
+\item For a pair of pulsars $a$ and $b$, define a reference frame. Specifically, write down the unit vectors which point to the pulsars, $\hat{p}_a$, $\hat{p}_b$, the direction of GW propagation $\hat{\Omega}$ and the principal axes $\hat m$, $\hat n$, such that $\hat m\times \hat n = \hat \Omega$.  {\it Hint, place pulsar $a$ on the z-axis and $b$ in the x-z plane}
+\item In your chosen coordinate system, write down the polarization tensors $e^+_{ab}(\hat \Omega) = \hat m_a\hat m_b - \hat n_a \hat n_b$, $e^\times_{ab} (\hat \Omega)= \hat m_a \hat n_b + \hat n_a \hat m_b$. For further reading, see \cite{AllenRomano:1999}.
+\item You now have all the ingredients to write down the antenna beam pattern, 
+
+\begin{equation}
+F^A(\hat \Omega) = \frac{1}{2} \frac{\hat p^i \hat p^j}{1+\hat\Omega\cdot\hat p} e^A_{ij}(\hat\Omega) \, ,  
+\end{equation}
+where $A=+,\times$ is the GW polarization. Specifically, give expressions for $F^+_a$, $F^\times_a$, $F^+_b$, $F^\times_b$.
+
+\item The overlap reduction function is given by integrating the antenna beam patterns over the sky, i.e. over all possible GW directions $\hat \Omega$:
+\begin{equation}
+^{(ab)}\Gamma(\zeta)=\int_0^\pi  \sin\theta d\theta \int_0^{2\pi} d\phi  \sum_A F^A_a(\hat \Omega) F^A_b(\hat \Omega) \, ,
+\end{equation}
+where $\zeta \in [0,\pi] $ is the angle between the pulsars. Using your expressions for the antenna beam pattern, you may either integrate the above expression analytically (hint, use contour integration) or open the ipython notebook and do this numerically. Plot the result for all $zeta$. The result is the Hellings and Downs curve! 
+\item Normalize this curve such that when $\zeta=0$, $^{(ab)}\Gamma(\zeta)=0.5$. What is this normalization factor?
+\item Which of these steps implicitly assumes an isotropic background? Where would we modify this calculation to take in to account anisotropy in the GW background? More on this in \cite{MingarelliEtAl:2013}.
+\end{enumerate}
+\begin{figure}[h]
+		\centering
+		\includegraphics[width=3.9in]{pta_geometry.pdf}
+		\caption[Typical pulsar timing array geometry]{Suggested geometry: pulsar $a$ is on the $z$-axis at a distance $L_a$ from the origin (solar system barycentre), pulsar $b$ is in the $x$-$z$ plane at a distance $L_b$ from the origin making an angle $\zeta$ with pulsar $a$. $\hat\Omega$ is the direction of GW propagation with principal axes $\hat m$ and $\hat n$ such that  $\hat m \times \hat n =\hat\Omega$. The polar and azimuthal angles are given by $\theta$ and $\phi$, respectively.}
+		\label{fig:geometry}
+	\end{figure}
+
+
+
+
+
+
+\bibliography{references}
+
+
+
+
+
+\end{document}
