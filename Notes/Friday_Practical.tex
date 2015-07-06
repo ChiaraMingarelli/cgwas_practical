@@ -88,6 +88,13 @@ Pulsar timing arrays are sensitive to GWs in the nanoHertz frequency regime. Sou
 
  %
 
+\begin{figure}[b]
+		\centering
+		\includegraphics[width=3.9in]{pta_geometry.pdf}
+		\caption[Typical pulsar timing array geometry]{Suggested geometry: pulsar $a$ is on the $z$-axis at a distance $L_a$ from the origin (solar system barycentre), pulsar $b$ is in the $x$-$z$ plane at a distance $L_b$ from the origin making an angle $\zeta$ with pulsar $a$. $\hat\Omega$ is the direction of GW propagation with principal axes $\hat m$ and $\hat n$ such that  $\hat m \times \hat n =\hat\Omega$. The polar and azimuthal angles are given by $\theta$ and $\phi$, respectively.}
+		\label{fig:geometry}
+	\end{figure}
+
 
 \begin{enumerate}
 \item For a pair of pulsars $a$ and $b$, define a reference frame. Specifically, write down the unit vectors which point to the pulsars, $\hat{p}_a$, $\hat{p}_b$, the direction of GW propagation $\hat{\Omega}$ and the principal axes $\hat m$, $\hat n$, such that $\hat m\times \hat n = \hat \Omega$.  {\it Hint, place pulsar $a$ on the z-axis and $b$ in the x-z plane}
@@ -106,18 +113,9 @@ where $A=+,\times$ is the GW polarization. The polarization tensors $e^+_{ij}(\h
 \end{equation}
 where $\zeta \in [0,\pi] $ is the angle between the pulsars. Using your expressions for the antenna beam pattern, you may either integrate the above expression analytically (hint, use contour integration) or open the ipython notebook and do this numerically. Plot the result for all $\zeta$. The result is the Hellings and Downs curve! 
 
-\item Normalize this curve such that when $\zeta=0$, $^{(ab)}\Gamma(\zeta)=0.5$. What is this normalization factor?
-
 \item Which of these steps implicitly assumes an isotropic background? Where would we modify this calculation to take in to account anisotropy in the GW background? More on this in \cite{MingarelliEtAl:2013}.
 \end{enumerate}
 
-
-\begin{figure}[h]
-		\centering
-		\includegraphics[width=3.9in]{pta_geometry.pdf}
-		\caption[Typical pulsar timing array geometry]{Suggested geometry: pulsar $a$ is on the $z$-axis at a distance $L_a$ from the origin (solar system barycentre), pulsar $b$ is in the $x$-$z$ plane at a distance $L_b$ from the origin making an angle $\zeta$ with pulsar $a$. $\hat\Omega$ is the direction of GW propagation with principal axes $\hat m$ and $\hat n$ such that  $\hat m \times \hat n =\hat\Omega$. The polar and azimuthal angles are given by $\theta$ and $\phi$, respectively.}
-		\label{fig:geometry}
-	\end{figure}
 
 
 
