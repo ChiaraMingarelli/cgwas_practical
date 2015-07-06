@@ -139,7 +139,7 @@ where $\zeta \in [0,\pi] $ is the angle between the pulsars. Using your expressi
 
 [Analytical Solution]
 
-Substituting Eq.~(\ref{e:F+Fx_comp}) into Eq.~(\ref{eq:ORF}), the overlap reduction functions become:
+Substituting Eq.~(\ref{e:F+Fx_comp}) into Eq.~(\ref{eq:ORF}), the overlap reduction functions becomes:
 \begin{equation}
 	{}^{(ab)}\Gamma(\zeta) \! = \!-\frac{1}{4}\int_0^\pi \!\!\!d\theta\sin\theta \!\! \int_0^{2\pi}\!\!\!\!d\phi
 	\frac{(1-\cos\theta)(\sin^2\zeta\sin^2\phi-\sin^2\zeta\cos^2\theta\cos^2\phi-\cos^2\!\zeta\sin^2\theta+2\sin\zeta\!\cos\zeta\!\sin\theta\cos\theta\cos\phi )}
@@ -154,8 +154,7 @@ One can write Eq \eqref{e:Gammalm_ex} as the sum of two integrals:
 
 where
 \begin{eqnarray}
-Q &=&  \int_0^\pi \!\!d\theta\sin\theta(1\!-\!\cos\theta) \int_0^{2\pi}d\phi (1\!-\!\cos\zeta\!\cos\theta\!-\!\sin\zeta\!\sin\theta\cos\phi)\\
-&=&\sqrt{4\pi}\left(1+\frac{\cos\zeta}{3}\right).
+Q &=&  \int_0^\pi \!\!d\theta\sin\theta(1\!-\!\cos\theta) \int_0^{2\pi}d\phi (1\!-\!\cos\zeta\!\cos\theta\!-\!\sin\zeta\!\sin\theta\cos\phi) =\sqrt{4\pi}\left(1+\frac{\cos\zeta}{3}\right) \, ,
 \label{eq:AppQ}
 \end{eqnarray}
 and
@@ -167,12 +166,12 @@ and
 Eq \eqref{eq:Im} is evaluated via contour integration (or via Maple/Mathematica, whatever you like!)
 
 \begin{eqnarray}
-I&=&2\pi\frac{1+\cos\zeta\cos\theta-|\cos\zeta+\cos\theta|}{\sin^2\zeta\sin^2\theta}\label{eq:An1}\\
+I&=&2\pi\frac{1+\cos\zeta\cos\theta-|\cos\zeta+\cos\theta|}{\sin^2\zeta\sin^2\theta}\label{eq:An1}\, ,\\
 I&=&2\pi
  \left\{
 \begin{array}{lc}
 \left(\frac{1-\cos\zeta}{\sin^2\zeta}\right)\left(\frac{1-\cos\theta}{\sin^2\theta}\right), &		 	0<\theta<\pi-\zeta 	\\
-\left(\frac{1+\cos\zeta}{\sin^2\zeta}\right)\left(\frac{1+\cos\theta}{\sin^2\theta}\right), &	 \pi-\zeta<\theta<\pi \label{eq:R00pm}\\
+\left(\frac{1+\cos\zeta}{\sin^2\zeta}\right)\left(\frac{1+\cos\theta}{\sin^2\theta}\right), &	 \pi-\zeta<\theta<\pi \label{eq:R00pm}\, .\\
 \end{array}
 \right.
 \end{eqnarray}
@@ -185,30 +184,20 @@ R&=&-\frac{4\pi(1-\cos\zeta)}{\sqrt{4\pi}}\!\int_0^{\pi-\zeta}\!\!\! d\theta  \f
 
  Using Eq \eqref{eq:quarterGamma}, one may write the isotropic solution to Eq \eqref{e:Gammalm_ex}:
 \begin{equation}
-{}^{(ab)}\Gamma(\zeta)=\frac{\sqrt{\pi}}{2}\left[1+\frac{\cos\zeta}{3}+4\beta\ln\left(\sin\frac{\zeta}{2}\right)\right]\, .
+{}^{(ab)}\Gamma(\zeta)=\frac{\sqrt{\pi}}{2}\left[1+\frac{\cos\zeta}{3}+4(1-\cos\zeta)\ln\left(\sin\frac{\zeta}{2}\right)\right]\, .
 \end{equation}
-This equation is the Hellings and Downs curve up to a multiplicative factor.
-
-\item Normalize this curve such that when $\zeta=0$, $^{(ab)}\Gamma(\zeta)=0.5$. What is this normalization factor?
-
-$4\sqrt{\pi}/3$. In fact the Hellings and Downs curve is normalized such that it is equal to 1 for  $\zeta = 0$, {\it i.e.} pulsar $a =$ pulsar $b$, but that discussion is beyond the scope of this course. If you're interested in knowing more about this, see \cite{MingarelliSidery:2014}.
-
+This equation is the Hellings and Downs curve up to a multiplicative factor. If you're interested in knowing more about this, see \cite{MingarelliSidery:2014}.
 
 \item Which of these steps implicitly assumes an isotropic background? Where would we modify this calculation to take in to account anisotropy in the GW background? More on this in \cite{MingarelliEtAl:2013}.
 
-In the evaluation of the overlap reduction function, one can add an angular power distribution, $P(\hat\Omega)=\sum_{lm}c_{lm}Y_{lm}$, which then allows for anisotropy. The $Y_{lm}$ are the regular spherical harmonics.
+
+[Solution] We can decompose the GW power on the sky by using a basis of spherical harmonics. Mathematically, we write this as $P(\hat\Omega)=\sum_{lm}c_{lm}Y_{lm}$, where the $Y_{lm}$ are the regular spherical harmonics. The dependence on $P(\hat\Omega)$ is added to the evaluation of the overlap reduction reduction function before integration, thus allowing for any angular power distribution.
+\begin{equation}
+^{(ab)}\Gamma(\zeta)=\int_0^\pi  \sin\theta d\theta \int_0^{2\pi} d\phi  \sum_A F^A_a(\hat \Omega) F^A_b(\hat \Omega) P(\hat\Omega)\, ,
+\end{equation}
 \end{enumerate}
 
-
-
-
-
-
-
 \bibliography{references}
-
-
-
 
 
 \end{document}
