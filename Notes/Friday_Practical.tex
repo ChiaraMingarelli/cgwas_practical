@@ -78,6 +78,7 @@
 \maketitle
 
 \section{Introduction}
+In today's lectures, you have explored Testing General Relativity with GW observations, \cm{[Michele add a blurb about your lectures]}, and how to detect low frequency GWs using Pulsar Timing Arrays. The following exercises are meant to cement these concepts. These come in at least 2 flavors: general exercises, and advanced ones for those who may already be familiar with these concepts and are up for a challenge! 
 
 \section{Exercises}
 Do as many of the following exercises as time allows. If you get stuck, please ask a Lecturer or a teaching assistant for help.
@@ -131,9 +132,11 @@ Write down the antenna beam pattern and compute the overlap reduction function.
 \begin{equation}
 \omega^2 = m_g^2 +k^2\,.
 \end{equation}
-In other words, a single-frequency plane GW is given by metric perturbations of  
+In other words, a single-frequency plane GW produces the following metric perturbation: 
 \begin{equation}
-h_{ij} (t,\mathbf{x}) = e^{-i\omega t+ i k\hat\Omega\cdot\mathbf{x}} h_+
+h_{ij} (t,\mathbf{x}) = e^{-i\omega(k) t+ i k\hat\Omega\cdot\mathbf{x}} \left[
+H_+ e^{+}_{ij} +
+H_\times e^{\times}_{ij}\right]
 \end{equation}
 
 Write down the antenna beam pattern and the overlap reduction function. 
@@ -141,7 +144,8 @@ Write down the antenna beam pattern and the overlap reduction function.
 As a second step, let us explore how to distinguish between a standard GR background and a non-GR background. 
 \begin{enumerate}
 \setcounter{enumi}{7}
-\item Can we distinguish a general anisotropic GR background and a scalar background? What about a massive gravity background?
+\item Based on our result of the overlap reduction function for a scalar background, can we independently extract the scalar and the tensor background?  
+\item In the massive gravity case: if we do detect a stochastic background, can we use it to constrain the graviton mass?  How well can we do so?
 \end{enumerate}
 
 
