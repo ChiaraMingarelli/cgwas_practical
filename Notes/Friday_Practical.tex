@@ -78,7 +78,6 @@
 \maketitle
 
 \section{Introduction}
-In today's lectures, you have explored \cm{[Michele, Yanbei, add a blurb about your lectures]}, and how to detect low frequency GWs using Pulsar Timing Arrays. The following exercises are meant to cement these concepts. These come in at least 2 flavors: general exercises, and advanced ones for those who may already be familiar with these concepts and are up for a challenge! 
 
 \section{Exercises}
 Do as many of the following exercises as time allows. If you get stuck, please ask a Lecturer or a teaching assistant for help.
@@ -118,8 +117,32 @@ where $\zeta \in [0,\pi] $ is the angle between the pulsars. Using your expressi
 
 
 
+\subsection{Testing GR}
 
+Having built the above tools, Let us move on to explore testing GR in the context of GW background in PTAs.  We will do this in two steps: first, we shall compute the overlap reduction function in more general theories of gravity.  
+\begin{enumerate}
+\setcounter{enumi}{5}
+\item Suppose GW has a scalar component, i.e., for a gravitational wave propagating along the $\hat\Omega$ direction, we have 
+\begin{equation}
+e^{\circ}_{ij}(\Omega)=\hat m_i\hat m_j+\hat n_i \hat n_j\,.
+\end{equation}
+Write down the antenna beam pattern and compute the overlap reduction function.  
+\item Suppose, {\it instead}, that the graviton is actually massive, and that the GW has a dispersion relation 
+\begin{equation}
+\omega^2 = m_g^2 +k^2\,.
+\end{equation}
+In other words, a single-frequency plane GW is given by metric perturbations of  
+\begin{equation}
+h_{ij} (t,\mathbf{x}) = e^{-i\omega t+ i k\hat\Omega\cdot\mathbf{x}} h_+
+\end{equation}
 
+Write down the antenna beam pattern and the overlap reduction function. 
+\end{enumerate}
+As a second step, let us explore how to distinguish between a standard GR background and a non-GR background. 
+\begin{enumerate}
+\setcounter{enumi}{7}
+\item Can we distinguish a general anisotropic GR background and a scalar background? What about a massive gravity background?
+\end{enumerate}
 
 
 \bibliography{references}
