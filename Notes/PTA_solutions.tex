@@ -107,12 +107,33 @@ where $A=+,\times$ is the GW polarization. The polarization tensors $e^+_{ij}(\h
 
 
 [Solution]
-\begin{subequations}
-\begin{align}
-F^+_a &= \frac{1}{2} \frac{(\hat m \cdot \hat p_a)^2-(\hat n \cdot \hat p_a)^2}{1+\hat\Omega\cdot\hat p_a}\, ,\\
-F^\times_a &= \frac{(\hat m \cdot \hat p_a)(\hat n \cdot \hat p_a)}{1+\hat\Omega\cdot\hat p_a}\, .
-\end{align}
-\end{subequations}
+
+Using the definition of the polarization tensors above, we write
+\bea
+F^+(\hat \Omega) &=& \frac{1}{2} \frac{\hat p^i \hat p^j}{1+\hat\Omega\cdot\hat p} e^+_{ij}(\hat\Omega) \, ,  \\
+ &=& \frac{1}{2} \frac{\hat p^i \hat p^j}{1+\hat\Omega\cdot\hat p}(\hat m_i\hat m_j - \hat n_i \hat n_j)\, ,  \\
+ &=& \frac{1}{2} \frac{(\hat p^i \hat m_i) (\hat p^j \hat m_j) - (\hat p^i \hat n_i) (\hat p^j \hat n_j)}{1+\hat\Omega\cdot\hat p}\, . 
+\eea
+Note that this is the definition of a dot product! i.e. $p^i \hat m_i = \hat p \cdot \hat m$. Therefore, the final (general) answer is:
+
+\begin{equation}
+F^+ = \frac{1}{2} \frac{(\hat p \cdot \hat m)^2 - (\hat p\cdot\hat n)^2}{1+\hat\Omega\cdot\hat p}\, . 
+\end{equation}
+
+Similarly, for the cross polarization, we write
+
+\bea
+F^\times(\hat \Omega) &=& \frac{1}{2} \frac{\hat p^i \hat p^j}{1+\hat\Omega\cdot\hat p} e^\times_{ij}(\hat\Omega) \, ,  \\ 
+&=& \frac{1}{2} \frac{\hat p^i \hat p^j}{1+\hat\Omega\cdot\hat p}(\hat m_i \hat n_j + \hat n_i \hat m_j)\, , \\
+&=& \frac{1}{2} \frac{(\hat p^i \hat m_i) (\hat p^j \hat n_j) + (\hat p^i  \hat n_i) (\hat p^j \hat m_j)}{1+\hat\Omega\cdot\hat p} \, , \\
+\eea
+and again using the definition of the dot product, one can write the final answer:
+\begin{equation}
+F^\times(\hat \Omega) = \frac{(\hat p \cdot \hat m) (\hat p \cdot \hat n) }{1+\hat\Omega\cdot\hat p} \, .
+\end{equation}
+
+
+
 
 \item Give expressions for $F^+_a$, $F^\times_a$, $F^+_b$, $F^\times_b$ in your chosen coordinate frame.
 
